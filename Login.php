@@ -12,6 +12,17 @@ require_once('ConnectDB.php');
     <center>
         <form action="recieve.php" method=POST name="sendUser">
         <h1>MyChores Log in</h1>
+        <?php
+        if (isset(htmlspecialchars($_COOKIE['inval']))) {
+            setcookie('inval', 1, time() - 3600);
+            ?>
+            <div class="alert alert-danger alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <center><strong>Invalid Login!</strong> Username and password do not match</center>
+            </div>
+            <?php
+        }
+        ?>
         <h3>
         <br>
         Username:&nbsp;<input type="text" name="myusername" placeholder="username">
