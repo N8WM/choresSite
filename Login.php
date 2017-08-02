@@ -1,15 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-
-// Create connection
-$conn = mysqli_connect('localhost:3306', 'root', 'root');
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require_once('ConnectDB.php');
 ?>
 <html>
     <head>
