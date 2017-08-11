@@ -13,7 +13,7 @@ require_once('ConnectDB.php');
         <form action="recieve.php" method=POST name="sendUser">
         <h1>MyChores Log in</h1>
         <?php
-        if (isset(htmlspecialchars($_COOKIE['inval']))) {
+        if (isset($_COOKIE['inval'])) {
             setcookie('inval', 1, time() - 3600);
             ?>
             <div class="alert alert-danger alert-dismissable fade in">
